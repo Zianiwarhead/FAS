@@ -1,0 +1,135 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    transition: all 0.3s ease;
+  }
+  
+  /* Light and Dark Mode Variables */
+  :root {
+    --background-color: #f4f7fa;
+    --text-color: #333;
+    --primary-color: #e63946;
+    --secondary-color: #333;
+    --button-bg: #e63946;
+    --button-hover-bg: #d62828;
+  }
+  
+  body.dark-mode {
+    --background-color: #2f2f2f;
+    --text-color: #f4f7fa;
+    --primary-color: #ff9f00;
+    --secondary-color: #ddd;
+    --button-bg: #ff9f00;
+    --button-hover-bg: #e68900;
+  }
+  
+  /* Main Container */
+  .alert-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Title */
+  .alert-title {
+    font-size: 2rem;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Sections */
+  .section-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .section {
+    flex: 1;
+    margin: 0 10px;
+  }
+  
+  /* Emergency Select and Message */
+  .emergency-select, .custom-textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Theme Toggle Button */
+  .theme-toggle {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: background-color 0.3s;
+  }
+  
+  .theme-toggle:hover {
+    background-color: var(--button-hover-bg);
+  }
+  
+  /* Buttons */
+  .alert-button, .quick-access-button {
+    width: 100%;
+    padding: 15px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .alert-button {
+    background-color: var(--button-bg);
+  }
+  
+  .alert-button:hover {
+    background-color: var(--button-hover-bg);
+  }
+  
+  .quick-access-button {
+    padding: 12px;
+    font-size: 1rem;
+    margin-right: 10px;
+  }
+  
+  .quick-access-button.blue {
+    background-color: #007bff;
+  }
+  
+  .quick-access-button.blue:hover {
+    background-color: #0056b3;
+  }
+  
+  .quick-access-button.green {
+    background-color: #28a745;
+  }
+  
+  .quick-access-button.green:hover {
+    background-color: #218838;
+  }
+  
+  .location-display {
+    margin-top: 20px;
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+  }
+  

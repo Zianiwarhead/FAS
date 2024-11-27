@@ -1,0 +1,93 @@
+{
+  "contacts": [
+    {
+      "id": "1",
+      "name": "Mark",
+      "phone": "+254706643788"
+    },
+    {
+      "id": "2",
+      "name": "Jane Smith",
+      "phone": "+987654321"
+    },
+    {
+      "id": "8683",
+      "name": "A",
+      "phone": "k"
+    },
+    {
+      "id": "03bb",
+      "name": "kkk",
+      "phone": "7777"
+    }
+  ],
+  "alerts": [
+    {
+      "id": "1",
+      "message": "This is an emergency alert!",
+      "location": "https://maps.google.com/?q=123.45,678.90",
+      "contacts": [
+        "+254706643788",
+        "+987654321"
+      ]
+    },
+    {
+      "id": "db82",
+      "message": "This is an emergency! Help me now.",
+      "location": "https://maps.google.com/?q=latitude,longitude",
+      "contacts": []
+    },
+    {
+      "id": "e7b1",
+      "message": "This is an emergency! Help me now.",
+      "location": "https://maps.google.com/?q=latitude,longitude",
+      "contacts": [
+        "0706643788"
+      ]
+    },
+    {
+      "id": "9dbd",
+      "message": "This is an emergency! Help me now.",
+      "location": "https://maps.google.com/?q=latitude,longitude",
+      "contacts": []
+    },
+    {
+      "id": "c7fd",
+      "message": "Emergency Alert! Please assist.",
+      "location": "Latitude: -1.0929379, Longitude: 37.012511"
+    },
+    {
+      "id": "ead5",
+      "message": "Emergency Alert! Please assist.",
+      "location": "Latitude: -1.2320768, Longitude: 36.8672768"
+    },
+    {
+      "id": "2cff",
+      "message": "Emergency Alert! Please assist.",
+      "location": "Latitude: -1.2320768, Longitude: 36.8672768"
+    },
+    {
+      "id": "5974",
+      "message": "This is an emergency! Help me now. Emergency type: other",
+      "location": "https://maps.google.com/?q=latitude,longitude",
+      "contacts": []
+    },
+    {
+      "id": "c43c",
+      "message": "Emergency Alert! Please assist.",
+      "location": "Latitude: -1.2320768, Longitude: 36.8672768"
+    },
+    {
+      "id": "2bdb",
+      "message": "Silent emergency alert! Please help.",
+      "location": "https://maps.google.com/?q=-1.2320768,36.8672768",
+      "contacts": []
+    },
+    {
+      "id": "81df",
+      "message": "kkkk",
+      "location": "https://maps.google.com/?q=-1.2320768,36.8672768",
+      "contacts": []
+    }
+  ]
+}
