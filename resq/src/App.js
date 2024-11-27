@@ -1,10 +1,9 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, NavLink } from "react-router-dom";
 
 // Import your components/pages
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Settings from "./pages/Settings";
 import EmergencyAlert from "./components/EmergencyAlert";
 
 // Styles for light and dark modes
@@ -22,31 +21,18 @@ const navBarStyles = {
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-  backgroundColor: "#e63946",
   padding: "10px 0",
   borderRadius: "5px",
   marginBottom: "20px",
   position: "sticky",
   top: "0",
   zIndex: "100",
+  backgroundColor: "#f5f5f5", // Neutral light gray background for the navbar
 };
 
 const navItemStyles = {
   listStyleType: "none",
   margin: "0 20px",
-};
-
-const linkStyles = {
-  textDecoration: "none",
-  color: "white",
-  fontSize: "1.2rem",
-  padding: "10px 20px",
-  borderRadius: "5px",
-  transition: "background-color 0.3s",
-};
-
-const linkHoverStyles = {
-  backgroundColor: "#d62828",
 };
 
 const buttonStyles = {
@@ -80,32 +66,55 @@ function App() {
         <nav style={navBarStyles}>
           <ul style={{ display: "flex", padding: "0", margin: "0" }}>
             <li style={navItemStyles}>
-              <Link to="/" style={linkStyles} onMouseOver={(e) => (e.target.style.backgroundColor = linkHoverStyles.backgroundColor)} onMouseOut={(e) => (e.target.style.backgroundColor = "")}>
+              <NavLink
+                to="/"
+                className="nav-link"
+                style={({ isActive }) =>
+                  isActive
+                    ? { backgroundColor: "#2790f1", ...navItemStyles }
+                    : {}
+                }
+              >
                 Home
-              </Link>
+              </NavLink>
             </li>
             <li style={navItemStyles}>
-              <Link to="/about" style={linkStyles} onMouseOver={(e) => (e.target.style.backgroundColor = linkHoverStyles.backgroundColor)} onMouseOut={(e) => (e.target.style.backgroundColor = "")}>
+              <NavLink
+                to="/about"
+                className="nav-link"
+                style={({ isActive }) =>
+                  isActive
+                    ? { backgroundColor: "#2790f1", ...navItemStyles }
+                    : {}
+                }
+              >
                 About
-              </Link>
+              </NavLink>
             </li>
             <li style={navItemStyles}>
-              <Link to="/settings" style={linkStyles} onMouseOver={(e) => (e.target.style.backgroundColor = linkHoverStyles.backgroundColor)} onMouseOut={(e) => (e.target.style.backgroundColor = "")}>
-                Settings
-              </Link>
-            </li>
-            <li style={navItemStyles}>
-              <Link to="/emergency-alert" style={linkStyles} onMouseOver={(e) => (e.target.style.backgroundColor = linkHoverStyles.backgroundColor)} onMouseOut={(e) => (e.target.style.backgroundColor = "")}>
+              <NavLink
+                to="/emergency-alert"
+                className="nav-link"
+                style={({ isActive }) =>
+                  isActive
+                    ? { backgroundColor: "#2790f1", ...navItemStyles }
+                    : {}
+                }
+              >
                 Emergency Alert
-              </Link>
+              </NavLink>
             </li>
             <li style={navItemStyles}>
-              {/* Toggle button to switch between light and dark mode */}
+              {/* Toggle button */}
               <button
                 onClick={toggleMode}
                 style={buttonStyles}
-                onMouseEnter={(e) => (e.target.style.backgroundColor = buttonHoverStyles.backgroundColor)}
-                onMouseLeave={(e) => (e.target.style.backgroundColor = buttonStyles.backgroundColor)}
+                onMouseEnter={(e) =>
+                  (e.target.style.backgroundColor = buttonHoverStyles.backgroundColor)
+                }
+                onMouseLeave={(e) =>
+                  (e.target.style.backgroundColor = buttonStyles.backgroundColor)
+                }
               >
                 {isDarkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
               </button>
@@ -114,10 +123,9 @@ function App() {
         </nav>
 
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/settings" element={<Settings />} />
-          <Route path="/emergency-alert" element={<EmergencyAlert />} />
+          <Route path="/" element={<Home isDarkMode={isDarkMode} />} />
+          <Route path="/about" element={<About isDarkMode={isDarkMode} />} />
+          <Route path="/emergency-alert" element={<EmergencyAlert isDarkMode={isDarkMode} />} />
         </Routes>
       </div>
     </Router>

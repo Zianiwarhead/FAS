@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import ContactList from "./ContactList";
 import "../styles.css";
 
 const EmergencyAlert = () => {
@@ -107,8 +106,10 @@ const EmergencyAlert = () => {
   return (
     <div className="alert-container">
       <h1 className="alert-title">Emergency Alert System</h1>
+
+      {/* Dark Mode Toggle with Sun and Moon Icons */}
       <button className="theme-toggle" onClick={handleThemeToggle}>
-        Toggle {isDarkMode ? "Light" : "Dark"} Mode
+        <i className={`fas ${isDarkMode ? 'fa-sun' : 'fa-moon'}`}></i>
       </button>
 
       <div className="section-container">
@@ -140,14 +141,15 @@ const EmergencyAlert = () => {
           )}
 
           <div className="silent-alert">
-            <label>
-              Silent Alert
+            <label className="switch">
               <input
                 type="checkbox"
                 checked={isSilent}
                 onChange={() => setIsSilent(!isSilent)}
               />
+              <span className="slider"></span>
             </label>
+            <span className="silent-text">Silent Alert</span>
           </div>
         </div>
       </div>
